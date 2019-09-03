@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Główna strona</title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/main.css}"/>
+    <style th:inline="text">
+        body{
+            background: url([[@{/images/guild.jpg}]])
+            no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <h2>Witaj w gildi</h2>
+    </div>
+    <div class="row justify-content-md-center">
+        <h2>Rozpocznij swoją przygodę teraz</h2>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-2">
+            <a th:href="@{/login}" class="btn btn-primary">Zaloguj się</a>
+        </div>
+        <div class="col-2">
+            <a th:href="@{/register}" class="btn btn-primary">Zarejestruj się </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
