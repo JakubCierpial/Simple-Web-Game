@@ -11,7 +11,7 @@
     <link rel="stylesheet" th:href="@{/main.css}"/>
     <style th:inline="text">
         body{
-            background: url([[@{/images/guild.jpg}]])
+            background: url("https://www.downloadwallpapers.info/preview/2016/07/21/98999_background-metal-scratches-surface_1920x1200_h.jpg")
             no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -20,24 +20,23 @@
         }
     </style>
 </head>
-
 <body>
 <div class="container">
-
-    <div class="row justify-content-md-center">
-        <h2>Witaj w gildi</h2>
+    <div class="alert alert-info" th:if="${messageDto.messeges !=null}">
+        <p th:each="message : ${messageDto.messeges}" th:text="${message}"></p>
     </div>
-    <div class="row justify-content-md-center">
-        <h2>Rozpocznij swoją przygodę teraz</h2>
-    </div>
-    <div class="row justify-content-md-center">
-        <div class="col-2">
-            <a th:href="@{/login}" class="btn btn-primary">Zaloguj się</a>
+    <div class="row justify-content-center mt-2 mb-2 ">
+        <div class="col-2 " >
+            <a th:href="@{/login}" class="btn btn-primary">Zaloguj się </a>
         </div>
-        <div class="col-2">
-            <a th:href="@{/register}" class="btn btn-primary">Zarejestruj się </a>
+    </div>
+    <div class="row justify-content-center mt-2 mb-2 ">
+        <div class="col-3 " >
+            <a th:href="@{/}" class="btn btn-primary">Powrót do strony głównej </a>
         </div>
     </div>
 </div>
+</div>
+
 </body>
 </html>

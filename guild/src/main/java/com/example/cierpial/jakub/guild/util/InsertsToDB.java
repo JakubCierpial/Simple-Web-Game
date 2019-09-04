@@ -20,7 +20,7 @@ public class InsertsToDB {
     public void init()
     {
         Role userRole = roleService.createNewRole("USER");
-        userService.createNewUser(new User("kebab","12345",true,"kebab@o2.pl",userRole));
+        userService.createNewUser(new User("kebab","1234567",true,"kebab@o2.pl",userRole));
     }
 
 }
